@@ -29,4 +29,4 @@ jobs:
           poetry install
 
       - name: Run Ruff
-        run: ruff check .
+        run: poetry run ruff check .
