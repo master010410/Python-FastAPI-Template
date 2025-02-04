@@ -8,5 +8,5 @@ if __name__ == "__main__":
         reload=True,
         port=settings.port,
         host=settings.host,
-        log_config=settings.logging_config
+        log_config=settings.logging_config,
     )

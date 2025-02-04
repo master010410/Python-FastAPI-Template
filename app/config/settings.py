@@ -22,12 +22,12 @@ class Settings(BaseSettings):
             "default": {
                 "formatter": "default",
                 "class": "logging.StreamHandler",
-                "stream": "ext://sys.stdout",  # Default is stderr
+                "stream": "ext://sys.stdout",
             },
             "access": {
                 "formatter": "default",
                 "class": "logging.StreamHandler",
-                "stream": "ext://sys.stdout",  # Default is stderr
+                "stream": "ext://sys.stdout",
             },
             "file_handler": {
                 "formatter": "custom",
