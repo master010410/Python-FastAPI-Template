@@ -4,29 +4,29 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  jobs:
-    lint:
-      name: Lint with Ruff
+jobs:
+  lint:
+    name: Lint with Ruff
 
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-        - name: Set up Python
-          uses: actions/setup-python@v4
-          with:
-            python-version: 3.12
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
 
-        - name: Install Poetry
-          run: |
-            curl -sSL https://install.python-poetry.org | python3 -
-            export PATH="$HOME/.local/bin:$PATH"
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.local/bin:$PATH"
 
-        - name: Install Dependencies
-          run: |
-            poetry install
+      - name: Install Dependencies
+        run: |
+          poetry install
 
-        - name: Run Ruff
-          run: ruff check .
+      - name: Run Ruff
+        run: ruff check .
