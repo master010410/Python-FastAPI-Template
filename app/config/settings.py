@@ -1,9 +1,12 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from app.constants import MODE
+
 
 class Settings(BaseSettings):
     port: int = 5000
     host: str = "127.0.0.1"
+    mode: str = MODE.DEV
 
     logging_config: dict = {
         "version": 1,
