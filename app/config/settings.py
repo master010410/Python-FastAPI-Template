@@ -40,14 +40,18 @@ class Settings(BaseSettings):
             },
         },
         "loggers": {
-            "uvicorn": {"handlers": ["default"], "level": "INFO", "propagate": False},
+            "uvicorn": {
+                "handlers": ["default", "file_handler"],
+                "level": "INFO",
+                "propagate": False,
+            },
             "uvicorn.access": {
-                "handlers": ["access"],
+                "handlers": ["access", "file_handler"],
                 "level": "INFO",
                 "propagate": False,
             },
             "uvicorn.error": {
-                "handlers": ["default"],
+                "handlers": ["default", "file_handler"],
                 "level": "INFO",
                 "propagate": False,
             },
