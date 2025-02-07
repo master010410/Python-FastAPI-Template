@@ -10,5 +10,5 @@ if __name__ == "__main__":
         port=settings.port,
         host=settings.host,
         log_config=settings.logging_config,
-        workers=4 if settings.mode == MODE.PROD else None
+        workers=4 if settings.mode == MODE.PROD else None,
     )
