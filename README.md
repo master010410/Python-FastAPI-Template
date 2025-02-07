@@ -16,25 +16,19 @@ Template for building backend using python and FastAPI.
 
 ## Steps to run program
 
-1. Initialize Project
-
-   ```shell
-   poetry init
-   ```
-
-2. Install Packages
+1. Install Packages
    ```shell
    poetry install
    ```
 
-3. Write `.env` file
+2. Write `.env` file
    ```text
    PORT="Port number to host project"
    HOST="Address to host project"
    MODE="Runtime Mode"
    ```
 
-4. Run project
+3. Run project
    ```shell
    python main.py
    ```
